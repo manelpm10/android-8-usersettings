@@ -3,4 +3,7 @@
     <string name="litsNewsUrl">News URL</string>
     <string name="litsLoadNews">Load news</string>
     <string name="litsSettings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

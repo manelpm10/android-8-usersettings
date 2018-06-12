@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements SettingsButtonFra
     @Override
     public void showSettings() {
         fragmentTransaction = fragmentManager.beginTransaction();
+        // With this line, we return to activity on click in return button.
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.replace(R.id.settings_container, new SettingsFragment()).commit();
     }
 }

@@ -9,7 +9,7 @@
     <FrameLayout
         android:id="@+id/settings_container"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,12 +20,29 @@
 
     <Button
         android:id="@+id/btnShowVarsInSettings"
-        android:layout_width="match_parent"
+        android:layout_width="204dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:onClick="showVarsInSettings"
+        android:layout_marginEnd="124dp"
+        android:layout_marginStart="8dp"
 
-        android:text="Show vars in settings"
+        android:layout_marginTop="32dp"
+        android:onClick="showVarsInSettings"
+        android:text="Show settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_container" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Change Settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnShowVarsInSettings"
+        app:layout_constraintTop_toBottomOf="@+id/settings_container"
+        android:onClick="changeUserSettings"/>
 
 </android.support.constraint.ConstraintLayout>

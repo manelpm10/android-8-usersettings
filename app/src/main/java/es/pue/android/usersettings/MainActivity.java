@@ -38,8 +38,22 @@ public class MainActivity extends AppCompatActivity implements SettingsButtonFra
     public void showVarsInSettings(View view) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String urlNews = prefs.getString("etUrlNews", "default_value_here");
-        boolean loadNews = prefs.getBoolean("shouldLoadNews", true);
+        boolean shouldLoadNews = prefs.getBoolean("shouldLoadNews", true);
 
         Log.d("DEBUG", "showVarsInSettings: "+urlNews);
+        if (shouldLoadNews) {
+            // Launch an AsyncTask to load news from Internet.
+            Log.d("DEBUG", "showVarsInSettings: loadNews enabled");
+        } else {
+            Log.d("DEBUG", "showVarsInSettings: loadNews disabled");
+        }
+
+    }
+
+    public void changeUserSettings(View view) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor prefsEditor = prefs.edit();
+        prefsEditor.putBoolean("shouldLoadNews", false);
+        prefsEditor.commit();
     }
 }

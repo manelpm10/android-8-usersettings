@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:defaultValue="Default value"
+        android:key="etUrlNews"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/litsNewsUrl"
+        android:summary="@string/litsNewsUrl"
+        />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="shouldLoadNews"
+        android:title="@string/litsLoadNews"
+        android:summary="@string/litsLoadNews"/>
+</PreferenceScreen>
